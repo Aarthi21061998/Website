@@ -21,7 +21,7 @@
       "@components/*": ["./src/components/*"],
       "@helpers/*": ["./src/helpers/*"],
       "@constants/*": ["./src/constants/*"],
-      "@icons/*": ["./src/assets/icons/*"],
+      "@icons/*": ["./src/assets/Icons/*"],
       "@images/*": ["./src/assets/images/*"],
       "@logos/*": ["./src/assets/logos/*"],
       "@custom-svg/*": ["./src/assets/custom-svg/*"],

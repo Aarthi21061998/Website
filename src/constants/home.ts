@@ -10,6 +10,104 @@ import GrayStar from "@icons/GrayStar.svg"
 import GreenTick from "@icons/GreenTick.svg"
 import GrayTick from "@icons/GrayTick.svg"
 
+interface PricingPlan {
+    id: number;
+    title: string;
+    custom: boolean;
+    popular: boolean;
+    monthly?: {
+        price: string;
+        verification: string;
+        tick: string; // Adjust type as per your icon imports
+        tick1: string; // Adjust type as per your icon imports
+        tick2: string; // Adjust type as per your icon imports
+        tick3: string; // Adjust type as per your icon imports
+    };
+    yearly?: {
+        price: string;
+        verification: string;
+        tick: string; // Adjust type as per your icon imports
+        tick1: string; // Adjust type as per your icon imports
+        tick2: string; // Adjust type as per your icon imports
+        tick3: string; // Adjust type as per your icon imports
+    };
+    content: string;
+    btnText: string;
+}
+export const pricing: PricingPlan[] = [
+    {
+        id: 1,
+        title: "Starter",
+        custom: false,
+        popular: false,
+        monthly: {
+            price: "3,000",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GrayStar,
+            tick2: GreenTick,
+            tick3: GrayTick,
+        },
+        yearly: {
+            price: "30,000",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GrayStar,
+            tick2: GreenTick,
+            tick3: GrayTick,
+        },
+        content: "For startups and solopreneurs looking to build a business across digital platforms",
+        btnText: "Get Started",
+    },
+    {
+        id: 2,
+        title: "Growth",
+        custom: false,
+        popular: true,
+        monthly: {
+            price: "5,000",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GreenStar,
+            tick2: GreenTick,
+            tick3: GreenTick,
+        },
+        yearly: {
+            price: "50,000",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GreenStar,
+            tick2: GreenTick,
+            tick3: GreenTick,
+        },
+        content: "For small to mid-scale businesses looking to expand their business growth",
+        btnText: "Get Started",
+    },
+    {
+        id: 3,
+        title: "Magnum",
+        custom: true,
+        popular: false,
+        monthly: {
+            price: "2,500",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GreenStar,
+            tick2: GreenTick,
+            tick3: GreenTick,
+        },
+        yearly: {
+            price: "25,000",
+            verification: "Business Verification",
+            tick: GreenStar,
+            tick1: GreenStar,
+            tick2: GreenTick,
+            tick3: GreenTick,
+        },
+        content: "For enterprise businesses looking for a fully featured customizable business suite",
+        btnText: "Contact Sales",
+    },
+];
 
 
 export const PricingCardList = [
@@ -46,110 +144,110 @@ export const PricingCardList = [
 ];
 
 
-export const pricing = [
-    {
-        id: 1,
-        title: "Starter",
-        custom: false,
-        popular: false,
-        // icon: images?.Starter,
-        monthly: {
-            price: "3,000",
-            verification: "Business Verification",
-            tick:  GreenStar,
-            tick1: GrayStar,
-            tick2: GreenTick,
-            tick3:GrayTick,
-        },
-        // quarterly: {
-        //     price: "9,000",
-        //     verification: "Business Verification",
-        //     tick:  GreenStar,
-        //     tick1: GrayStar,
-        //     tick2: GreenTick,
-        //     tick3:GrayTick,
+// export const pricing = [
+//     {
+//         id: 1,
+//         title: "Starter",
+//         custom: false,
+//         popular: false,
+//         // icon: images?.Starter,
+//         monthly: {
+//             price: "3,000",
+//             verification: "Business Verification",
+//             tick:  GreenStar,
+//             tick1: GrayStar,
+//             tick2: GreenTick,
+//             tick3:GrayTick,
+//         },
+//         // quarterly: {
+//         //     price: "9,000",
+//         //     verification: "Business Verification",
+//         //     tick:  GreenStar,
+//         //     tick1: GrayStar,
+//         //     tick2: GreenTick,
+//         //     tick3:GrayTick,
            
-        // },
-        yearly: {
-            price: "30,000",
-            verification: "Business Verification",
-           tick:  GreenStar,
-            tick1: GrayStar,
-            tick2: GreenTick,
-            tick3:GrayTick,
-        },
-        content: "For startups and solopreneurs looking to build a business acrossdigital platforms",
-        btnText: "Get Started",
-    },
-  {
-    id: 2,
-    title: "Growth",
-    custom: false,
-    popular: true,
-    // icon: images?.Growth,
-    monthly: {
-      price: "5,000",
-        verification: "Business Verification",
-        tick: GreenStar,
-       tick1:GreenStar,
-    tick2: GreenTick,
-    tick3: GreenTick,
-    },
-    // quarterly: {
-    //   price: "15,000",
-    //     verification: "Business Verification",
-    //    tick:  GreenStar,
-    //     tick1: GreenTick,
-    //  tick2: GreenTick,
-    // tick3: GreenTick,
+//         // },
+//         yearly: {
+//             price: "30,000",
+//             verification: "Business Verification",
+//            tick:  GreenStar,
+//             tick1: GrayStar,
+//             tick2: GreenTick,
+//             tick3:GrayTick,
+//         },
+//         content: "For startups and solopreneurs looking to build a business acrossdigital platforms",
+//         btnText: "Get Started",
+//     },
+//   {
+//     id: 2,
+//     title: "Growth",
+//     custom: false,
+//     popular: true,
+//     // icon: images?.Growth,
+//     monthly: {
+//       price: "5,000",
+//         verification: "Business Verification",
+//         tick: GreenStar,
+//        tick1:GreenStar,
+//     tick2: GreenTick,
+//     tick3: GreenTick,
+//     },
+//     // quarterly: {
+//     //   price: "15,000",
+//     //     verification: "Business Verification",
+//     //    tick:  GreenStar,
+//     //     tick1: GreenTick,
+//     //  tick2: GreenTick,
+//     // tick3: GreenTick,
       
-    // },
-    yearly: {
-      price: "50,000",
-      verification: "Business Verification",
-     tick:  GreenStar,
-        tick1: GreenStar,
-     tick2: GreenTick,
-    tick3: GreenTick,
-    },
-    content: "For small to mid-scale businesses looking to expand their business growth",
+//     // },
+//     yearly: {
+//       price: "50,000",
+//       verification: "Business Verification",
+//      tick:  GreenStar,
+//         tick1: GreenStar,
+//      tick2: GreenTick,
+//     tick3: GreenTick,
+//     },
+//     content: "For small to mid-scale businesses looking to expand their business growth",
     
-    btnText: "Get Started",
-  },
-  {
-    id: 3,
-    title: "Magnum",
-    custom: true,
-    popular: false,
-    // icon: images?.Magnum,
-    monthly: {
-      price: "2,500",
-      verification: "Business Verification",
-      tick: GreenStar,
-       tick1:GreenStar,
-    tick2: GreenTick,
-    tick3: GreenTick,
-    },
-    // quarterly: {
-    //   price: "2,500",
-    //   verification: "Business Verification",
-    //  tick:  GreenStar,
-    //     tick1: GreenTick,
-    //  tick2: GreenTick,
-    // tick3: GreenTick,
-    // },
-    yearly: {
-      price: "25,000",
-      verification: "Business Verification",
-     tick:  GreenStar,
-        tick1: GreenStar,
-     tick2: GreenTick,
-    tick3: GreenTick,
-    },
-    content: "For enterprise businesses looking for a fully featured customizable business suite",
-      btnText: "Contact Sales",
-  },
-];
+//     btnText: "Get Started",
+//   },
+//   {
+//     id: 3,
+//     title: "Magnum",
+//     custom: true,
+//     popular: false,
+//     // icon: images?.Magnum,
+//     monthly: {
+//       price: "2,500",
+//       verification: "Business Verification",
+//       tick: GreenStar,
+//        tick1:GreenStar,
+//     tick2: GreenTick,
+//     tick3: GreenTick,
+//     },
+//     // quarterly: {
+//     //   price: "2,500",
+//     //   verification: "Business Verification",
+//     //  tick:  GreenStar,
+//     //     tick1: GreenTick,
+//     //  tick2: GreenTick,
+//     // tick3: GreenTick,
+//     // },
+//     yearly: {
+//       price: "25,000",
+//       verification: "Business Verification",
+//      tick:  GreenStar,
+//         tick1: GreenStar,
+//      tick2: GreenTick,
+//     tick3: GreenTick,
+//     },
+//     content: "For enterprise businesses looking for a fully featured customizable business suite",
+//       btnText: "Contact Sales",
+//   },
+// ];
 
 export const MonthList = [
   {
