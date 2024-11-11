@@ -5,6 +5,7 @@ import { MutableRefObject } from "react";
 
 import Video1 from "@icons/SegementVideo.gif";
 import Video from "@icons/Strategy--giff.gif";
+import Video2 from "@icons/Final-Out-for-dev.gif";
 
 import Header from "@icons/header.gif";
 
@@ -251,7 +252,9 @@ export default function Home() {
         <Image src={Scale} alt="" />
 
         <div className="w-[100%] flex flex-row px-40 absolute top-10">
-          <div className="w-[45%] flex justify-center"></div>
+          <div className="w-[45%] flex justify-center">
+            <Image src={Video2} alt="" />
+          </div>
           <div className="w-[50%] flex flex-col justify-center text-[white]">
             <h1 className="text-[2vw] font-Sora font-bold px-20 pb-5">
               Scale Through Automation
@@ -281,7 +284,7 @@ export default function Home() {
           </h1>
         </div>
 
-        {/* <div className="w-full flex flex-row gap-10 justify-center">
+        <div className="w-full flex flex-row gap-10 justify-center">
           {MarketingGoalsList?.map((data) => (
             <div
               className="w-[25%] h-[45vh] rounded-lg from-[#0A0D2A] via-[#0A0D2A] to-[#2D3154] bg-gradient-to-r "
@@ -299,7 +302,7 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
         {/* Growth */}
       </div>
